@@ -1,8 +1,14 @@
 *{
   margin: 0;
 }
-h1{
+h1,h4,h2,h6{
   text-align: center;
+  color: #fefefe;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-wrap: balance;
+}
+h4{
+  font-weight:600;
 }
 h6{
   font-size: 10px;
@@ -17,4 +23,62 @@ a {
  }
  ::selection {
   background: rgba(0, 0, 0, 0.5);
+}
+.span{
+  animation: dot 3s linear infinite;
+}
+@keyframes conteinerRight{
+  0%{
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+  50%{
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  60%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+
+  @keyframes leftPanel{
+    0%{
+      transform: translateX(-1000px);
+    }
+    90%{
+      transform: translateX(0px);
+    }
+  }
+
+@keyframes rightPanel{
+  0%{
+    transform: translateX(1000px);
+  }
+  90%{
+    transform: translateX(0px);
+  }
+}
+@keyframes dot {
+  0%{
+    opacity: 0;
+  }
+  15%{
+    opacity: 1;
+  }
+  30%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 0;
+  }
+  85%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }

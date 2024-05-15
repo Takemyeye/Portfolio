@@ -1,10 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './App';
+import { ActiveProvider } from './component/components/ActiveContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ActiveProvider>
+      <App />
+    </ActiveProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
