@@ -16,8 +16,10 @@ const LeftPanel = () => {
         <div className="imgCircle">
           <div className="img"></div>
         </div>
-          <button className="download">Download Resume  <FontAwesomeIcon icon={faDownload} /></button>
-      </div>
+          <a href="/resume.txt" download="Oleh_Bratok_Resume.txt">
+            <button className="download">Download Resume <FontAwesomeIcon icon={faDownload} /></button>
+          </a>      
+        </div>
       <div className={`conteinerRight ${isActive ? 'active' : ''}`}>        
         <div className="text-skills">
           <h4>Description</h4>

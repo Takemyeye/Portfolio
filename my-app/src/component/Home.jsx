@@ -4,8 +4,16 @@ import LeftPanel from "./components/leftPanel";
 import AbautMe from "./components/abautMe";
 import "./styles/home.css";
 import Header from "./components/Header";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faAutoprefixer} from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div>
@@ -18,6 +26,9 @@ const Home = () => {
           <div className="switch2"></div>
         </div>
           <AbautMe/>
+      </div>
+      <div className="back-to-Top"  onClick={scrollToTop}>            
+        <FontAwesomeIcon icon={faAutoprefixer} />
       </div>
     </div>
   );
