@@ -498,3 +498,51 @@ h1{
   height: 70%;
 }
 }
+@media all and (min-width: 1441) and (max-width: 2560px){
+  .imgCircle, .img{
+    width: 500px;
+    height: 500px;
+    }
+  .download{
+    font-size: 30px;
+  }
+  .inf-text{
+    font-size: 40px;
+  }
+  h6{
+    font-size: 20px;
+  }
+  .text-skills{
+    font-size: 25px;
+  }
+  .descriotion{
+    font-size: 25px;
+    width: 400px;
+  }
+  .conteinerRight{
+    width: 600px;
+    gap: 60px;
+  }
+  .skills{
+    gap: 15px;
+    font-size: 25px;
+  }
+  .ui{
+    width: 50px;
+    height: 50px;
+  }
+  .abaut{
+    height: 85%;
+    width: 40%;
+  }
+  .experience{
+    width: 30%;
+    height: 85%;
+  }
+  .h1{
+    font-size: 50px;
+  }
+  .text-full-stack{
+    font-size: 30px;
+  }
+}
