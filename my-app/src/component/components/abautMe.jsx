@@ -25,7 +25,7 @@ const AbautMe = () =>{
     <div className="main2">
       <div className={`abaut ${isAbaut ? 'active' : ''}`}>
         <div className="descriptionAbaut">
-          <h1>About Me<span>.</span><span style={{ fontSize: '25px' }}>.</span><span className="span" style={{ fontSize: '20px' }}>.</span></h1>
+          <h1 className="h1">About Me<span>.</span><span style={{ fontSize: '25px' }}>.</span><span className="span" style={{ fontSize: '20px' }}>.</span></h1>
             <div className="text-full-stack"><span>Summary: </span>{abautMe[0]}</div>
             <div className="text-full-stack"><span>Work Experience: </span>{abautMe[1]}</div>
             <div className="text-full-stack"><span>Education: </span>{abautMe[2]}</div>

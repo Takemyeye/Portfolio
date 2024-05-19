@@ -25,8 +25,8 @@ const Home = () => {
           <div className="switch"></div>
           <div className="switch2"></div>
         </div>
-          <AbautMe/>
       </div>
+      <AbautMe/>
       <div className="back-to-Top"  onClick={scrollToTop}>            
         <FontAwesomeIcon icon={faAutoprefixer} />
       </div>

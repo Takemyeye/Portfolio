@@ -59,3 +59,36 @@ header{
 .navigation:hover::after {
   width: 100%;
 }
+@media all and (min-width: 320px ) and (max-width: 520px){
+.austronaut{
+  display: none;
+}
+.title{
+  padding: 2px;
+  font-size: 25px;
+}
+.navigation{
+  font-size: 11px;
+}
+}
+@media all and (min-width: 520px) and (max-width: 768px){
+.austronaut{
+  display: none;
+  }
+.navigation{
+  font-size: 15px;
+  }
+}
+@media all and (min-width: 769px) and (max-width: 1024px){
+.austronaut{
+  display: none;
+}
+}
+@media all and (min-width: 1024px) and (max-width: 2560px){
+  .title{
+    font-size: 45px;
+  }
+  .navigation{
+    font-size: 30px;
+  }
+}

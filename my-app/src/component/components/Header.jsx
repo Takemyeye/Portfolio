@@ -49,17 +49,20 @@ const Header = () => {
         <div className="austronaut"></div>
           <div className="conteiner">
             <Link to={"/"}>
-              <div className="navigation">Home</div>
+              <div className="mobile">
+               <div className="navigation">Home</div>
+              </div>
             </Link>
             <div className="navigation" onClick={handleAboutMeClick}>About me</div>
             <div className="navigation" onClick={handleExperienceClick}>Experience</div>
-            <div className="navigation">My services</div>
             <div className="navigation" onClick={handleSkillsClick}>Skills</div>
             <Link to={"https://mail.google.com/mail/u/0/#search/takemyeyehz%40gmail.come?compose=new"}>
               <div className="navigation">Contact</div>
             </Link>
             <a href="https://www.instagram.com/takemyeyehz/" target="_blank" rel="noopener noreferrer">
-              <div className="navigation">Blog</div>
+              <div className="mobile">
+                <div className="navigation">Blog</div>
+              </div>
             </a>
           </div>
     </header>
