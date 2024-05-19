@@ -50,7 +50,7 @@ const Header = () => {
           <div className="conteiner">
             <Link to={"/"}>
               <div className="mobile">
-               <div className="navigation">Home</div>
+                <div className="navigation">Home</div>
               </div>
             </Link>
             <div className="navigation" onClick={handleAboutMeClick}>About me</div>

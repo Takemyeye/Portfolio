@@ -27,7 +27,7 @@ const RightPanel = () => {
     <div className="rightPanel">
       <div className="text-me">
         <h1>Hi there,</h1>
-          <div className="name">I'm Oleh <span className="span" style={{ animation: 'none' }}>Bratok</span></div>        
+          <div className="name">I'm Oleh <span className="span" style={{ animation: 'none', backgroundColor: 'rgba(0, 0, 0, 0.656)',borderRadius:'10px',padding:'2px'}}>Bratok</span></div>        
           <div>Web Developer</div>
             <button onClick={handleAboutMeClick}>About Me</button>
               <div className="socium">
