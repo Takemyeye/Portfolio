@@ -4,11 +4,27 @@ const ActiveContext = createContext();
 
 export const ActiveProvider = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
-  const [isAbaut, setIsabaut] = useState(false);
-  const [IsExperience, setIsExperience] = useState(false);
+  const [isAbout, setIsAbout] = useState(false);
+  const [isExperience, setIsExperience] = useState(false);
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+  };
 
   return (
-    <ActiveContext.Provider value={{ isActive, setIsActive, isAbaut, setIsabaut, IsExperience, setIsExperience }}>
+    <ActiveContext.Provider
+      value={{
+        isActive,
+        setIsActive,
+        isAbout,
+        setIsAbout,
+        isExperience,
+        setIsExperience,
+        language,
+        handleLanguageChange,
+      }}
+    >
       {children}
     </ActiveContext.Provider>
   );
