@@ -33,8 +33,7 @@ const translations = {
 };
 
 const Header = () => {
-  const { setIsActive, setIsabaut, setIsExperience } = useContext(ActiveContext); 
-  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+  const { setIsActive, setIsAbout, setIsExperience, language, handleLanguageChange } = useContext(ActiveContext); 
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -48,35 +47,22 @@ const Header = () => {
     }, 1000); 
   };
 
-  const handleAbautClick = () => {
-    setIsabaut(true);
+  const handleAboutClick = () => {
+    setIsAbout(true);
     setTimeout(() => {
-      setIsabaut(false);
+      setIsAbout(false);
     }, 1000); 
   };
 
-  const handleExperience = () => {
+  const handleExperienceClick = () => {
     setIsExperience(true);
     setTimeout(() => {
       setIsExperience(false);
     }, 1000); 
   };
 
-  const handleAboutMeClick = () => {
-    handleAbautClick();
-  };
-
-  const handleExperienceClick = () => {
-    handleExperience();
-  };
-
   const toggleLanguageMenu = () => {
     setLanguageMenuOpen(!languageMenuOpen);
-  };
-
-  const handleLanguageChange = (lang) => {
-    setLanguage(lang);
-    setLanguageMenuOpen(false);
   };
 
   const headerPhrase = useMemo(() => translations[language], [language]);
@@ -85,7 +71,7 @@ const Header = () => {
     <header>
       <div className={`changeLanguage ${languageMenuOpen ? 'open' : ''}`} onClick={toggleLanguageMenu}>
         <p>Language</p>
-        <div className={`Language ${languageMenuOpen && 'open'}`}>
+        <div className={`Language ${languageMenuOpen ? 'open' : ''}`}>
           <p onClick={() => handleLanguageChange('it')}>It</p>
           <p onClick={() => handleLanguageChange('en')}>Eng</p>
           <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
@@ -97,7 +83,9 @@ const Header = () => {
         </div>
       </div>
       <Link to={"/"}>
-        <div className="title">S</div>
+        <div className="mobile">
+          <div className="title">S</div>
+        </div>
       </Link>
       <div className="austronaut"></div>
       <div className="conteiner">
@@ -106,8 +94,8 @@ const Header = () => {
             <div className="navigation">{headerPhrase.home}</div>
           </div>
         </Link>
-        <a href="#abaut">
-          <div className="navigation" onClick={handleAboutMeClick}>{headerPhrase.aboutMe}</div>
+        <a href="#about">
+          <div className="navigation" onClick={handleAboutClick}>{headerPhrase.aboutMe}</div>
         </a>
         <a href="#experience">
           <div className="navigation" onClick={handleExperienceClick}>{headerPhrase.experience}</div>

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import ActiveContext from './ActiveContext';
 
 const AbautMe = () => {
-  const { isAbaut, IsExperience, language } = useContext(ActiveContext);
+  const { isAbout, isExperience, language } = useContext(ActiveContext);
 
   const phrases = {
     en: {
@@ -103,7 +103,7 @@ const currentPhrases = phrases[language];
 
 return (
   <div className='main2'>
-    <div id='abaut' className={`abaut ${isAbaut ? 'active' : ''}`}>
+    <div id='about' className={`abaut ${isAbout ? 'active' : ''}`}>
       <div className='descriptionAbaut'>
         <h1 className='h1'>
           {currentPhrases.aboutMe}
@@ -136,7 +136,7 @@ return (
         </a>
       </div>
     </div>
-    <div id='experience' className={`experience ${IsExperience ? 'active' : ''}`}>
+    <div id='experience' className={`experience ${isExperience ? 'active' : ''}`}>
       <h1 className='h1'>{currentPhrases.professionalExperience}</h1>
       <div className='text-full-stack'>
         <span>{currentPhrases.comprehensiveExpertise}: </span>

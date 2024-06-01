@@ -60,6 +60,11 @@ header{
   width: 100%;
 }
 @media all and (min-width: 320px ) and (max-width: 520px){
+.changeLanguage{
+  top: 4%;
+  left: 1%;
+  font-size: 10px;
+}
 .austronaut{
   display: none;
 }
@@ -75,6 +80,14 @@ header{
 }
 }
 @media all and (min-width: 520px) and (max-width: 768px){
+.changeLanguage{
+  top: calc(4% - 3px);
+  left: 19%;
+  font-size: 12px;
+}
+.mobile{
+  display: none;
+}
 .austronaut{
   display: none;
   }
@@ -83,6 +96,9 @@ header{
   }
 }
 @media all and (min-width: 769px) and (max-width: 1024px){
+  .changeLanguage{
+    left: 17%;
+  }
 .austronaut{
   display: none;
 }
