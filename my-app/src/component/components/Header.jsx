@@ -12,7 +12,8 @@ const translations = {
     experience: 'Experience',
     skills: 'Skills',
     contact: 'Contact',
-    blog: 'Blog'
+    blog: 'Blog',
+    language:'Language'
   },
   ru: {
     home: 'Домой',
@@ -20,7 +21,8 @@ const translations = {
     experience: 'Опыт',
     skills: 'Навыки',
     contact: 'Контакты',
-    blog: 'Блог'
+    blog: 'Блог',
+    language:'Язык'
   },
   it: {
     home: 'Home',
@@ -28,7 +30,8 @@ const translations = {
     experience: 'Esperienza',
     skills: 'Competenze',
     contact: 'Contatti',
-    blog: 'Blog'
+    blog: 'Blog',
+    language:'Lingua'
   }
 };
 
@@ -70,17 +73,17 @@ const Header = () => {
   return (
     <header>
       <div className={`changeLanguage ${languageMenuOpen ? 'open' : ''}`} onClick={toggleLanguageMenu}>
-        <p>Language</p>
-        <div className={`Language ${languageMenuOpen ? 'open' : ''}`}>
-          <p onClick={() => handleLanguageChange('it')}>It</p>
-          <p onClick={() => handleLanguageChange('en')}>Eng</p>
-          <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
-          <div className='iconLenguage'>
-            <FontAwesomeIcon icon={faEarthEurope} />
-            <FontAwesomeIcon icon={faEarthAmericas} />
-            <FontAwesomeIcon icon={faEarthAsia} />
+        <div className="textLanguage">{headerPhrase.language}</div>
+          <div className={`Language ${languageMenuOpen ? 'open' : ''}`}>
+            <p onClick={() => handleLanguageChange('it')}>It</p>
+            <p onClick={() => handleLanguageChange('en')}>Eng</p>
+            <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
+              <div className='iconLanguage'>
+                <FontAwesomeIcon icon={faEarthEurope} />
+                <FontAwesomeIcon icon={faEarthAmericas} />
+                <FontAwesomeIcon icon={faEarthAsia} />
+              </div>
           </div>
-        </div>
       </div>
       <Link to={"/"}>
         <div className="mobile">
