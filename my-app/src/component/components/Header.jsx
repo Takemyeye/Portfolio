@@ -79,9 +79,9 @@ const Header = () => {
             <p onClick={() => handleLanguageChange('en')}>Eng</p>
             <p onClick={() => handleLanguageChange('ru')}>Ru</p>  
               <div className='iconLanguage'>
-                <FontAwesomeIcon icon={faEarthEurope} />
-                <FontAwesomeIcon icon={faEarthAmericas} />
-                <FontAwesomeIcon icon={faEarthAsia} />
+                <FontAwesomeIcon icon={faEarthEurope} onClick={() => handleLanguageChange('it')}/>
+                <FontAwesomeIcon icon={faEarthAmericas} onClick={() => handleLanguageChange('en')}/>
+                <FontAwesomeIcon icon={faEarthAsia} onClick={() => handleLanguageChange('ru')}/>
               </div>
           </div>
       </div>
