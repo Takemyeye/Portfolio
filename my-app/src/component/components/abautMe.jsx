@@ -131,7 +131,7 @@ return (
           <span>{currentPhrases.additionalInformation}: </span>
           {abautMe[language][4]}
         </div>
-        <a href='/resume.txt' download='Oleh_Bratok_Resume.txt'>
+        <a href="/resume.pdf" download="Oleh_Bratok_Resume.pdf">
           <button className='btn'>{currentPhrases.downloadButton}</button>
         </a>
       </div>

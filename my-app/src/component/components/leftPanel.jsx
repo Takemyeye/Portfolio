@@ -50,7 +50,7 @@ const LeftPanel = () => {
         <div className="imgCircle">
           <div className="img"></div>
         </div>
-          <a href="/resume.txt" download="Oleh_Bratok_Resume.txt">
+          <a href="/resume.pdf" download="Oleh_Bratok_Resume.pdf">
             <button className="download">{headerPhrase.download} <FontAwesomeIcon icon={faDownload} /></button>
           </a>      
         </div>
