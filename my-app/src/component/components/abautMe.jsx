@@ -101,6 +101,19 @@ const AbautMe = () => {
 
 const currentPhrases = phrases[language];
 
+const getResumeFileName = () => {
+  switch (language) {
+    case 'eng':
+      return 'resume.eng.pdf';
+    case 'ru':
+      return 'resume.ru.pdf';
+    case 'it':
+      return 'resume.it.pdf';
+    default:
+      return 'resume.eng.pdf'; 
+  }
+};
+
 return (
   <div className='main2'>
     <div id='about' className={`abaut ${isAbout ? 'active' : ''}`}>
@@ -131,7 +144,7 @@ return (
           <span>{currentPhrases.additionalInformation}: </span>
           {abautMe[language][4]}
         </div>
-        <a href="/resume.pdf" download="Oleh_Bratok_Resume.pdf">
+        <a href={getResumeFileName()} download={`Oleh_Bratok_Resume.${language}.pdf`}>
           <button className='btn'>{currentPhrases.downloadButton}</button>
         </a>
       </div>
